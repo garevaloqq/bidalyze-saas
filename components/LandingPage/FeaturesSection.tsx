@@ -1,4 +1,3 @@
-import { AreaChartOutlined, BarChartOutlined, BellFilled, LockOutlined, PieChartOutlined, TagOutlined } from '@ant-design/icons';
 import { Col, Row, Space, Typography } from 'antd';
 import Image from 'next/image';
 import { useTheme } from 'context/ThemeContext';
