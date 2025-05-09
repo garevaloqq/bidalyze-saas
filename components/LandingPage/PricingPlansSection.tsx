@@ -1,3 +1,4 @@
+"use client"
 import { Badge, Button, Card, Col, Row, Typography } from "antd"
 import { useTranslations } from "next-intl"
 
