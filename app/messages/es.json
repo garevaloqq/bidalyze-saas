@@ -3,6 +3,11 @@
     "meta_title": "Plantilla SaaS - La plantilla perfecta para construir y escalar tu negocio con facilidad.",
     "meta_description": "Una plantilla gratuita y de código abierto para páginas de destino de tu negocio SaaS, construida con React, TypeScript, Shadcn UI y Tailwind CSS."
   },
+  "LanguageSwitcher":{
+    "es": "Español",
+    "en": "Ingles",
+    "fr": "Frances"
+  },
   "Navbar": {
     "sign_in": "Iniciar sesión",
     "sign_up": "Registrarse",

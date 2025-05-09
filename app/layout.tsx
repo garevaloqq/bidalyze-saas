@@ -1,14 +1,10 @@
-// app/layout.tsx
 import "@ant-design/v5-patch-for-react-19";
 import "antd/dist/reset.css";
-import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ClerkProvider } from '@clerk/nextjs';
-import { ConfigProvider } from 'antd';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { cookies, headers } from 'next/headers';
 import React from 'react';
-import { ThemeProvider } from "context/ThemeContext";
 import Providers from "./providers";
 
 const geistSans = Geist({
@@ -48,13 +44,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <ClerkProvider dynamic>
       <html lang={locale}>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <ConfigProvider>
-            <AntdRegistry>
-              <Providers locale={locale!} messages={messages}>
-                <ThemeProvider>{children}</ThemeProvider>
-              </Providers>
-            </AntdRegistry>
-          </ConfigProvider>
+          <Providers locale={locale!} messages={messages}>
+            {children}
+          </Providers>
         </body>
       </html>
     </ClerkProvider>

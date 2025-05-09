@@ -1,15 +1,13 @@
-// components/LanguageSwitcher.tsx
 "use client";
 
+import { GlobalOutlined} from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Button, Menu, Popover } from 'antd';
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 
-const LOCALES = [
-    { code: "es", label: "Español" },
-    { code: "en", label: "English" },
-    { code: "fr", label: "Français" },
-];
+type MenuItem = Required<MenuProps>['items'][number];
 
 export default function LanguageSwitcher() {
     const current = useLocale();
@@ -17,25 +15,52 @@ export default function LanguageSwitcher() {
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
 
-    const changeLocale = (newLocale: string) => {
-        // Guardamos en cookie y refrescamos la página para reenviar SSR
+    const items: MenuItem[] = [
+        {
+            key: 'es',
+            label: `${t('es')}`,
+        },
+        {
+            key: 'en',
+            label: `${t('en')}`,
+        },
+        {
+            key: 'fr',
+            label: `${t('fr')}`,
+        },
+    ];
+
+    const changeLocale: MenuProps['onClick'] = (e) => {
+        const newLocale = e.key;
+        console.log('LOCALE', newLocale);
         document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
         startTransition(() => {
             router.refresh();
         });
     };
 
+    const languageMenu = (<Menu
+        mode="vertical"
+        defaultSelectedKeys={[current]}
+        onClick={changeLocale}
+        style={{ width: 125 }}
+        items={items}
+        disabled={isPending}
+        triggerSubMenuAction={'click'}
+        expandIcon={false}
+    />);
+
     return (
-        <select
-            value={current}
-            onChange={(e) => changeLocale(e.target.value)}
-            disabled={isPending}
+        <Popover
+            content={languageMenu}
+            trigger="click"
+            placement="bottomRight"
         >
-            {LOCALES.map((l) => (
-                <option key={l.code} value={l.code}>
-                    {t(l.code)}
-                </option>
-            ))}
-        </select>
+            <Button
+                type="text"
+                icon={<GlobalOutlined />}
+                style={{ fontSize: '18px' }}
+            />
+        </Popover>
     );
 }

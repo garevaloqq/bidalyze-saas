@@ -1,6 +1,8 @@
-// app/providers.tsx
 'use client';
+
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { NextIntlClientProvider } from 'next-intl';
+import { ThemeProvider } from "context/ThemeContext";
 
 interface ProvidersProps {
     children: React.ReactNode;
@@ -11,8 +13,12 @@ interface ProvidersProps {
 
 export default function Providers({ children, locale, messages }: ProvidersProps) {
     return (
-        <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-        </NextIntlClientProvider>
+        <AntdRegistry>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+                <ThemeProvider>
+                    {children}
+                </ThemeProvider>
+            </NextIntlClientProvider>
+        </AntdRegistry>
     );
 }

@@ -3,6 +3,11 @@
     "meta_title": "SaaS Template - Le template SaaS parfait pour construire et mettre à l'échelle votre entreprise en toute simplicité.",
     "meta_description": "Un template gratuit et open-source de landing page pour votre entreprise SaaS, construit avec React, TypeScript, Shadcn UI et Tailwind CSS."
   },
+  "LanguageSwitcher":{
+    "es": "Espagnol",
+    "en": "Anglais",
+    "fr": "Français"
+  },
   "Navbar": {
     "sign_in": "Se connecter",
     "sign_up": "S'inscrire",

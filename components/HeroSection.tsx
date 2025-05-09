@@ -1,15 +1,25 @@
-import { Button, Typography } from 'antd';
-
-const { Title, Paragraph } = Typography;
+import { Button, Col, Image, Row, Space, Typography } from 'antd';
+const { Title, Text } = Typography;
 
 const HeroSection = () => (
-    <div style={{ padding: '100px 50px', background: '#001529', color: '#fff', textAlign: 'center' }}>
-        <Title style={{ color: '#fff' }}>Insights Accionables & Decisiones Basadas en Datos para Mercados Cripto</Title>
-        <Paragraph style={{ color: '#fff' }}>
-            CryptoQuant es un proveedor líder y confiable de análisis de datos en cadena y de mercado para instituciones e inversores profesionales en criptomonedas.
-        </Paragraph>
-        <Button type="primary" size="large">Comenzar Gratis</Button>
-    </div>
+    <Row gutter={[32, 32]} align="middle" justify="center" style={{ marginBottom: '50px' }}>
+        <Col xs={24} md={10} style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <Title>Anticipa las necesidades de tus clientes con Bidalyze</Title>
+            <Text>Descubre qué productos están comprando las empresas y ofrece tus soluciones en el momento adecuado.</Text>
+            <Space style={{ marginTop: '20px' }}>
+                <Button type="primary" size="large">Comienza Gratis</Button>
+                <Button size="large">Ver Demo</Button>
+            </Space>
+        </Col>
+        <Col xs={24} md={12} style={{ textAlign: 'center' }}>
+            <Image
+                src="/assets/hero-graph.png"
+                alt="Estadísticas de Bidalyze"
+                preview={false}
+                style={{ maxWidth: '60%', height: 'auto' }}
+            />
+        </Col>
+    </Row>
 );
 
 export default HeroSection;

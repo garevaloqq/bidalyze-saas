@@ -1,16 +1,20 @@
-// app/page.tsx
 'use client';
-import { Button } from 'antd';
-import { useTranslations } from "next-intl";
+import { Layout } from 'antd';
 import React from 'react';
-import LanguageSwitcher from 'components/LanguageSwitcher';
+import { MainHeader } from 'components/Header/MainHeader';
+import LandingPage from 'components/LandingPage/LandingPage';
+const { Content, Footer } = Layout;
 
 export default function HomePage() {
-  const t = useTranslations();
   return (
-    <div style={{ padding: 20 }}>
-      <LanguageSwitcher />
-      <Button type="primary">{t("Navbar.sign_in")}</Button>
-    </div>
+    <Layout style={{ minHeight: "100vh" }}>
+      <MainHeader />
+      <Content style={{ padding: '50px 15%' }}>
+        <LandingPage />
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>
+        Bidalyze ©2025 - Todos los derechos reservados
+      </Footer>
+    </Layout>
   );
 }
