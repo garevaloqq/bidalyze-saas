@@ -4,6 +4,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry"
 import { NextIntlClientProvider } from "next-intl"
 import React, { useEffect, useState } from "react"
 import { ThemeProvider } from "context/ThemeContext"
+import '@ant-design/v5-patch-for-react-19';
 
 interface ProvidersProps {
   children: React.ReactNode

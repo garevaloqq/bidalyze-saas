@@ -3,6 +3,7 @@ import { DownOutlined, MenuOutlined, MoonOutlined, SunOutlined } from "@ant-desi
 import { Button, Divider, Drawer, Dropdown, Grid, Layout, Menu, Space, Switch } from "antd"
 import type { MenuProps } from "antd"
 import Image from "next/image"
+import Link from "next/link"
 import React, { useState } from "react"
 import LanguageSwitcher from "components/LanguageSwitcher"
 import { useTheme } from "context/ThemeContext"
@@ -74,8 +75,12 @@ export function ResponsiveHeader() {
             </Space>
           </Dropdown>
           <LanguageSwitcher />
-          <Button type="primary">Sign Up</Button>
-          <Button>Sign In</Button>
+          <Link href="/sign-up" passHref>
+            <Button type="primary">Sign Up</Button>
+          </Link>
+          <Link href="/sign-in" passHref>
+            <Button>Sign In</Button>
+          </Link>
           <Switch
             onChange={toggleTheme}
             checkedChildren={<SunOutlined />}
@@ -91,10 +96,14 @@ export function ResponsiveHeader() {
         <Menu items={itemsMobile} mode="inline" />
         <Divider />
         <Space direction="vertical" style={{ width: "100%" }}>
-          <Button type="primary" block>
-            Sign Up
-          </Button>
-          <Button block>Sign In</Button>
+          <Link href="/sign-up" passHref>
+            <Button type="primary" block>
+              Sign Up
+            </Button>
+          </Link>
+          <Link href="/sign-in" passHref>
+            <Button block >Sign In</Button>
+          </Link>
         </Space>
       </Drawer>
     </Header>

@@ -1,13 +1,13 @@
 import { OrganizationProfile } from "@clerk/nextjs"
+import { getI18nPathServer } from "utils/server"
 
-import { getI18nPath } from "utils/Helpers"
-
-const OrganizationProfilePage = async (props: { params: { locale: string } }) => {
+const OrganizationProfilePage = async () => {
+  const path = await getI18nPathServer("/dashboard/organization-profile");
   return (
     <>
       <OrganizationProfile
         routing="path"
-        path={getI18nPath("/dashboard/organization-profile", props.params.locale)}
+        path={path}
         afterLeaveOrganizationUrl="/onboarding/organization-selection"
         appearance={{
           elements: {

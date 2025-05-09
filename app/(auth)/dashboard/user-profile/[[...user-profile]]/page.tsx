@@ -1,16 +1,16 @@
 import { UserProfile } from "@clerk/nextjs"
 import { useTranslations } from "next-intl"
+import { getI18nPathServer } from "utils/server"
 
-import { getI18nPath } from "utils/Helpers"
-
-const UserProfilePage = (props: { params: { locale: string } }) => {
+const UserProfilePage = async () => {
   const t = useTranslations("UserProfile")
+  const path = await getI18nPathServer("/dashboard/user-profile");
 
   return (
     <>
       <UserProfile
         routing="path"
-        path={getI18nPath("/dashboard/user-profile", props.params.locale)}
+        path={path}
         appearance={{
           elements: {
             rootBox: "w-full",

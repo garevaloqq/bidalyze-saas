@@ -1,9 +1,9 @@
 import { Divider } from "antd"
+import FAQSection from "./FAQSection"
 import FeaturesSection from "./FeaturesSection"
 import HeroSection from "./HeroSection"
 import PricingPlansSection from "./PricingPlansSection"
 import TestimonialsSection from "./TestimonialsSection"
-import FAQSection from "./FAQSection"
 
 export default function LandingPage() {
   return (

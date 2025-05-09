@@ -16,10 +16,10 @@ importers:
         version: 6.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@ant-design/nextjs-registry':
         specifier: ^1.0.2
-        version: 1.0.2(@ant-design/cssinjs@1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(antd@5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.3(@babel/core@7.26.0)(@opentelemetry/api@1.7.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 1.0.2(@ant-design/cssinjs@1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(antd@5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.3(@babel/core@7.26.0)(@opentelemetry/api@1.7.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@ant-design/v5-patch-for-react-19':
         specifier: ^1.0.3
-        version: 1.0.3(antd@5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 1.0.3(antd@5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@clerk/localizations':
         specifier: ^3.15.1
         version: 3.15.1
@@ -57,8 +57,8 @@ importers:
         specifier: ^1.8.3
         version: 1.10.0(@opentelemetry/api-logs@0.45.1)(@opentelemetry/api@1.7.0)(@opentelemetry/resources@1.18.1(@opentelemetry/api@1.7.0))(@opentelemetry/sdk-metrics@1.30.1(@opentelemetry/api@1.7.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.7.0))
       antd:
-        specifier: ^5.25.0
-        version: 5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: ^5.25.1
+        version: 5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -2867,8 +2867,8 @@ packages:
   ansicolors@0.3.2:
     resolution: {integrity: sha512-QXu7BPrP29VllRxH8GwB7x5iX5qWKAAMLqKQGWTeLWVlNHNOpVMJ91dsxQAIWXpjuW5wqvxu3Jd/nRjrJ+0pqg==}
 
-  antd@5.25.0:
-    resolution: {integrity: sha512-p9d8Kuj/bipjNdg9NrTu1VmTrhcwIhURu2NfK6qaBMbb+LRyFdAUoseT+7J4a+5z3jNVjxH5zaYv/45Zf8Coyg==}
+  antd@5.25.1:
+    resolution: {integrity: sha512-4KC7KuPCjr0z3Vuw9DsF+ceqJaPLbuUI3lOX1sY8ix25ceamp+P8yxOmk3Y2JHCD2ZAhq+5IQ/DTJRN2adWYKQ==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -7639,10 +7639,10 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
-  '@ant-design/nextjs-registry@1.0.2(@ant-design/cssinjs@1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(antd@5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.3(@babel/core@7.26.0)(@opentelemetry/api@1.7.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@ant-design/nextjs-registry@1.0.2(@ant-design/cssinjs@1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(antd@5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(next@15.2.3(@babel/core@7.26.0)(@opentelemetry/api@1.7.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@ant-design/cssinjs': 1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      antd: 5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      antd: 5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next: 15.2.3(@babel/core@7.26.0)(@opentelemetry/api@1.7.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
@@ -7656,9 +7656,9 @@ snapshots:
       resize-observer-polyfill: 1.5.1
       throttle-debounce: 5.0.2
 
-  '@ant-design/v5-patch-for-react-19@1.0.3(antd@5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@ant-design/v5-patch-for-react-19@1.0.3(antd@5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      antd: 5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      antd: 5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
@@ -10758,7 +10758,7 @@ snapshots:
 
   ansicolors@0.3.2: {}
 
-  antd@5.25.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  antd@5.25.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@ant-design/colors': 7.2.0
       '@ant-design/cssinjs': 1.23.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)

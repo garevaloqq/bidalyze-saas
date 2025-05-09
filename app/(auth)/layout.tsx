@@ -1,21 +1,34 @@
-import { enUS, esES, frFR } from "@clerk/localizations"
-import { ClerkProvider } from "@clerk/nextjs"
-import { useLocale } from "next-intl"
+// app/(auth)/layout.tsx
+import { enUS, esES, frFR } from "@clerk/localizations";
+import { ClerkProvider } from "@clerk/nextjs";
+import { headers } from "next/headers";
+import React from "react";
 
-export default function AuthLayout({ children }: { children: React.ReactNode }) {
-  // 1. Leer el locale actual del NextIntlClientProvider
-  const locale = useLocale()
+// Función para detectar el idioma basado en el header de la solicitud
+async function detectLocale(): Promise<string> {
+  const headerStore = await headers();
+  const acceptLanguage = headerStore.get("accept-language") || "";
+  const detected = acceptLanguage.split(",")[0]?.split("-")[0];
+  const SUPPORTED_LOCALES = ["es", "en", "fr"];
+  const DEFAULT_LOCALE = "es";
 
-  // 2. Mapear a la localización de Clerk
-  let clerkLocale = esES
-  if (locale === "en") clerkLocale = enUS
-  if (locale === "fr") clerkLocale = frFR
+  return detected && SUPPORTED_LOCALES.includes(detected) ? detected : DEFAULT_LOCALE;
+}
 
-  // 3. Construir URLs de Clerk (sin prefijo de ruta)
-  const signInUrl = "/sign-in"
-  const signUpUrl = "/sign-up"
-  const dashboardUrl = "/dashboard"
-  const afterSignOutUrl = "/"
+export default async function AuthLayout({ children }: { children: React.ReactNode }) {
+  // Detectar el locale en SSR
+  const locale = await detectLocale();
+
+  // Mapear a la localización de Clerk
+  let clerkLocale = esES;
+  if (locale === "en") clerkLocale = enUS;
+  if (locale === "fr") clerkLocale = frFR;
+
+  // URLs de Clerk
+  const signInUrl = "/sign-in";
+  const signUpUrl = "/sign-up";
+  const dashboardUrl = "/dashboard";
+  const afterSignOutUrl = "/";
 
   return (
     <ClerkProvider
@@ -28,5 +41,5 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
     >
       {children}
     </ClerkProvider>
-  )
+  );
 }
