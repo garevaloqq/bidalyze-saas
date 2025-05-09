@@ -1,4 +1,3 @@
-// FeaturesSection for Bidalyze
 import { AreaChartOutlined, BarChartOutlined, BellFilled, LockOutlined, PieChartOutlined, TagOutlined } from '@ant-design/icons';
 import { Col, Row, Space, Typography } from 'antd';
 import Image from 'next/image';
@@ -7,36 +6,36 @@ import { useTheme } from 'context/ThemeContext';
 const { Title, Text } = Typography;
 
 export default function FeaturesSection() {
-    const { theme } = useTheme();
-    return (
-        <Row gutter={[32, 32]} justify="center" style={{ marginTop: '50px' }}>
-            <Col xs={24} md={12} lg={10}>
-                <Title level={3}>¿Por qué usar Bidalyze?</Title>
-                <Space direction="vertical" size="large" style={{ display: 'flex' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <Image src={theme === 'dark' ? '/assets/custom-bar-chart-icon-dark.png' : '/assets/custom-bar-chart-icon.png'} alt="Análisis en Tiempo Real" width={32} height={32} />
-                        <div>
-                            <Text strong style={{ fontSize: '16px' }}>Análisis en Tiempo Real</Text>
-                            <Text style={{ display: 'block' }}>Visualiza las compras al instante.</Text>
-                        </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <Image src={theme === 'dark' ? '/assets/custom-gift-icon-dark.png' : '/assets/custom-gift-icon.png'} alt="Ofertas Personalizadas" width={32} height={32} />
-                        <div>
-                            <Text strong style={{ fontSize: '16px' }}>Ofertas Personalizadas</Text>
-                            <Text style={{ display: 'block' }}>Ahorra tiempo y esfuerzo.</Text>
-                        </div>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                        <Image src={theme === 'dark' ? '/assets/custom-security-icon-dark.png' : '/assets/custom-security-icon.png'} alt="Seguridad y Privacidad" width={32} height={32} />
-                        <div>
-                            <Text strong style={{ fontSize: '16px' }}>Seguridad y Privacidad</Text>
-                            <Text style={{ display: 'block' }}>Protegemos tus datos.</Text>
-                        </div>
-                    </div>
-                </Space>
-            </Col>
-            <Col xs={24} md={12} lg={10}>
+  const { theme } = useTheme();
+  return (
+    <Row gutter={[32, 32]} justify="center" style={{ marginTop: '50px' }}>
+      <Col xs={24} md={12} lg={10}>
+        <Title level={3}>¿Por qué usar Bidalyze?</Title>
+        <Space direction="vertical" size="large" style={{ display: 'flex' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Image src={theme === 'dark' ? '/assets/custom-bar-chart-icon-dark.png' : '/assets/custom-bar-chart-icon.png'} alt="Análisis en Tiempo Real" width={32} height={32} />
+            <div>
+              <Text strong style={{ fontSize: '16px' }}>Análisis en Tiempo Real</Text>
+              <Text style={{ display: 'block' }}>Visualiza las compras al instante.</Text>
+            </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Image src={theme === 'dark' ? '/assets/custom-gift-icon-dark.png' : '/assets/custom-gift-icon.png'} alt="Ofertas Personalizadas" width={32} height={32} />
+            <div>
+              <Text strong style={{ fontSize: '16px' }}>Ofertas Personalizadas</Text>
+              <Text style={{ display: 'block' }}>Ahorra tiempo y esfuerzo.</Text>
+            </div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Image src={theme === 'dark' ? '/assets/custom-security-icon-dark.png' : '/assets/custom-security-icon.png'} alt="Seguridad y Privacidad" width={32} height={32} />
+            <div>
+              <Text strong style={{ fontSize: '16px' }}>Seguridad y Privacidad</Text>
+              <Text style={{ display: 'block' }}>Protegemos tus datos.</Text>
+            </div>
+          </div>
+        </Space>
+      </Col>
+      <Col xs={24} md={12} lg={10}>
         <Title level={3}>Lo que ofrecemos</Title>
         <Space direction="vertical" size="large" style={{ display: 'flex' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -62,6 +61,6 @@ export default function FeaturesSection() {
           </div>
         </Space>
       </Col>
-        </Row>
-    );
+    </Row>
+  );
 }

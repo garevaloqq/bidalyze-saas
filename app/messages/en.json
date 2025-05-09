@@ -1,9 +1,21 @@
 {
+  "pricing": {
+    "bestValue": "Best Value",
+    "popular": "Popular",
+    "recommended": "Recommended",
+    "choosePlan": "Choose Your Plan",
+    "basicDescription": "Ideal for startups and small businesses.",
+    "professionalDescription": "Perfect for growing teams.",
+    "enterpriseDescription": "Advanced features for large businesses."
+  },
+  "testimonial": {
+    "title": "What Our Customers Say"
+  },
   "Index": {
     "meta_title": "SaaS Template - The perfect SaaS template to build and scale your business with ease.",
     "meta_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS."
   },
-  "LanguageSwitcher":{
+  "LanguageSwitcher": {
     "es": "Spanish",
     "en": "English",
     "fr": "French"

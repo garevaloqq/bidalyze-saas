@@ -1,9 +1,21 @@
 {
+  "pricing": {
+    "bestValue": "Mejor Valor",
+    "popular": "Popular",
+    "recommended": "Recomendado",
+    "choosePlan": "Elige tu Plan",
+    "basicDescription": "Ideal para startups y pequeñas empresas.",
+    "professionalDescription": "Perfecto para equipos en crecimiento.",
+    "enterpriseDescription": "Funciones avanzadas para grandes empresas."
+  },
+  "testimonial": {
+    "title": "Lo que dicen nuestros clientes"
+  },
   "Index": {
     "meta_title": "Plantilla SaaS - La plantilla perfecta para construir y escalar tu negocio con facilidad.",
     "meta_description": "Una plantilla gratuita y de código abierto para páginas de destino de tu negocio SaaS, construida con React, TypeScript, Shadcn UI y Tailwind CSS."
   },
-  "LanguageSwitcher":{
+  "LanguageSwitcher": {
     "es": "Español",
     "en": "Ingles",
     "fr": "Frances"
