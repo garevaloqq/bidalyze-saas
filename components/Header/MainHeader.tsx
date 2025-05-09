@@ -23,7 +23,6 @@ const items: MenuProps['items'] = [
                 2nd menu item (disabled)
             </a>
         ),
-        disabled: true,
     },
     {
         key: '3',
@@ -32,12 +31,6 @@ const items: MenuProps['items'] = [
                 3rd menu item (disabled)
             </a>
         ),
-        disabled: true,
-    },
-    {
-        key: '4',
-        danger: true,
-        label: 'a danger item',
     },
 ];
 

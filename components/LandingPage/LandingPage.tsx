@@ -1,6 +1,6 @@
 import { Divider } from 'antd';
-import HeroSection from 'components/HeroSection';
 import FeaturesSection from './FeaturesSection';
+import HeroSection from './HeroSection';
 import PricingPlansSection from './PricingPlansSection';
 import TestimonialsSection from './TestimonialsSection';
 
