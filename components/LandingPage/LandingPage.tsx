@@ -3,6 +3,7 @@ import FeaturesSection from "./FeaturesSection"
 import HeroSection from "./HeroSection"
 import PricingPlansSection from "./PricingPlansSection"
 import TestimonialsSection from "./TestimonialsSection"
+import FAQSection from "./FAQSection"
 
 export default function LandingPage() {
   return (
@@ -20,6 +21,8 @@ export default function LandingPage() {
           { text: "A must-have tool for any sales team.", name: "Mike Johnson", rating: 4 },
         ]}
       />
+      <Divider />
+      <FAQSection />
     </>
   )
 }
