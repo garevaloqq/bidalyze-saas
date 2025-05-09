@@ -35,9 +35,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // Seleccionar locale válido
   const locale =
     (cookieLocale && SUPPORTED_LOCALES.includes(cookieLocale)) ||
-      (detectedLocale && SUPPORTED_LOCALES.includes(detectedLocale))
+    (detectedLocale && SUPPORTED_LOCALES.includes(detectedLocale))
       ? cookieLocale ?? detectedLocale
-      : DEFAULT_LOCALE;
+      : DEFAULT_LOCALE
 
   return (
     <ClerkProvider>
