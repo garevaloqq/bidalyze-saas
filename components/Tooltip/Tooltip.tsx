@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { Tooltip as AntdTooltip } from "antd";
-import { cva, type VariantProps } from "class-variance-authority";
-import React from "react";
-import { twMerge } from "tailwind-merge";
+import { Tooltip as AntdTooltip } from "antd"
+import { cva, type VariantProps } from "class-variance-authority"
+import React from "react"
+import { twMerge } from "tailwind-merge"
 
 const tooltipContent = cva([], {
   variants: {
@@ -18,23 +18,16 @@ const tooltipContent = cva([], {
     intent: "primary",
     size: "md",
   },
-});
+})
 
 export interface TooltipProps extends VariantProps<typeof tooltipContent> {
-  explainer: React.ReactElement | string;
-  children: React.ReactElement;
-  className?: string;
-  placement?: "top" | "right" | "bottom" | "left";
+  explainer: React.ReactElement | string
+  children: React.ReactElement
+  className?: string
+  placement?: "top" | "right" | "bottom" | "left"
 }
 
-export function Tooltip({
-  children,
-  explainer,
-  intent,
-  size,
-  placement = "top",
-  className,
-}: TooltipProps) {
+export function Tooltip({ children, explainer, intent, size, placement = "top", className }: TooltipProps) {
   return (
     <AntdTooltip
       title={explainer}
@@ -43,5 +36,5 @@ export function Tooltip({
     >
       {children}
     </AntdTooltip>
-  );
+  )
 }

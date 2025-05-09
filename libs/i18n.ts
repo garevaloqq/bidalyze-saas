@@ -1,10 +1,10 @@
-import { getRequestConfig } from 'next-intl/server';
-import { getUserLocale } from '../utils/AppConfig';
+import { getRequestConfig } from "next-intl/server"
+import { getUserLocale } from "../utils/AppConfig"
 
 export default getRequestConfig(async () => {
-  const locale = await getUserLocale();
+  const locale = await getUserLocale()
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
-  };
-});
+    messages: (await import(`../../messages/${locale}.json`)).default,
+  }
+})

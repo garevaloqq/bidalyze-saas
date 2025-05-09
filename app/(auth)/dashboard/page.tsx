@@ -1,13 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl"
 
 const DashboardIndexPage = () => {
-  const t = useTranslations('DashboardIndex');
+  const t = useTranslations("DashboardIndex")
 
-  return (
-    <>
-      {t('Dasboard')}
-    </>
-  );
-};
+  return <>{t("Dasboard")}</>
+}
 
-export default DashboardIndexPage;
+export default DashboardIndexPage
